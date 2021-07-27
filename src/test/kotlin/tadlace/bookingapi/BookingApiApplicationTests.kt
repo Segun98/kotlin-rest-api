@@ -8,6 +8,7 @@ class BookingApiApplicationTests {
 
 	@Test
 	fun contextLoads() {
+
 	}
 
 }

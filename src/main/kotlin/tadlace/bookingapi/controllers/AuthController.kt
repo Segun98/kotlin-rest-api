@@ -1,9 +1,7 @@
 package tadlace.bookingapi.controllers
 
-import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.security.config.web.servlet.oauth2.resourceserver.JwtDsl
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -12,6 +10,7 @@ import tadlace.bookingapi.dto.LoginDTO
 import tadlace.bookingapi.entity.Users
 import tadlace.bookingapi.service.UsersService
 import tadlace.bookingapi.utils.exceptions.Message
+import java.util.*
 
 @RestController
 class AuthController(
@@ -34,7 +33,12 @@ class AuthController(
 
         return if (check) {
 //            val issuer = loginBody.email
-//            val jwt =
+//            JWT.
+//            val token = JWT.builder()
+//                .withIssuer(issuer)
+//                .withClaim("username", loginBody.email)
+//                .withExpiresAt(Date(System.currentTimeMillis() + 60000))
+//                .sign(Algorithm.HMAC256(secret))
 
             ResponseEntity.ok(user)
         } else {

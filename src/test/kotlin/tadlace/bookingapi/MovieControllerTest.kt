@@ -25,10 +25,9 @@ data class Movie(
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 class MovieControllerTest(
-    @Autowired
+    @Autowired(required = false)
     private val mockMvc: MockMvc,
-
-    @Autowired
+    @Autowired(required = false)
     private val mapper: ObjectMapper
 ){
 
